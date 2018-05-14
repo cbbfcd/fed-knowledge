@@ -12,7 +12,7 @@
 
 _滥用全局变量_
 
-```text
+```javascript
 function Foo(){
     bar = 'hello world!'
 }
@@ -28,7 +28,7 @@ _DOM（ IE ）_
 
 IE 对 DOM 元素使用的是引用计数的清除算法，此类场景下泄露的情况很多。
 
-```text
+```javascript
 function Foo(){
     let a = document.createElement('div');
     let b = document.createElement('div');
