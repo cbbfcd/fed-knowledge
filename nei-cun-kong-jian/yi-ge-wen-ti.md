@@ -2,7 +2,7 @@
 
 比如这样一个问题:
 
-```text
+```javascript
 const Foo = (x, y) => {    
     this.x = x;    
     this.y = y;
