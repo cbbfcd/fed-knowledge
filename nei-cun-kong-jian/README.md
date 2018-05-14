@@ -10,64 +10,6 @@ description: 详解内存空间的知识点
 
 这个章节将会整理内存空间的部分知识点，抛砖引玉，更多的内容需要你去了解底层的知识。
 
-### 数据结构中的堆栈
-
-堆和栈既是计算机科学中的一种数据结构。同时内存分配中也有堆、栈的说法，不要混淆了。
-
-我们的重点是了解内存分配中的堆栈，同时简单了解一下数据结构中的[堆](https://zh.wikipedia.org/wiki/%E5%A0%86_%28%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%29)、[栈](https://zh.wikipedia.org/wiki/%E5%A0%86%E6%A0%88)。
-
-数据结构中的堆、栈：
-
-1. 栈是一种串列形式的特殊数据类型，特点是 LIFO（后进先出），在 JS 中可以使用数组实现一个栈结构，基本的操作有压入\(push\)、弹出\(pop\)，分别对应栈顶部指针 +1、-1。
-2. 堆，其实就是二叉堆，是二叉树的一种。可以想象成一颗倒过来的树，根节点要么是最小的（最小堆），要么是最大的（最大堆）。并且从根节点往下只能依次增大或者减小（堆序性）。堆结构有一个经典的案例就是[堆排序](https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F)。
-
-#### 堆排序
-
-JavaScript 实现堆排序：
-
-```text
-const heapSort = target => {
-    const arr = target.slice(0);
-    // 交换的方法
-    const swap = (i, j) => {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    // 确保父节点永远大于子节点
-    const max_heap = (start, end) => {
-        let dad = start;
-        // 左边子节点
-        let son = dad * 2 + 1;
-        if(son >= end){
-            return;
-        }
-        // 两个子节点中选择大的
-        if(son+1<end && arr[son]<arr[son+1]){
-            son++;
-        }
-        // 如果大于父节点，交换
-        if(arr[dad] <= arr[son]){
-            swap(dad, son);
-            max_heap(son, end);
-        }
-    }
-    let len = arr.length;
-    // 最后一个父节点 Math.floor(len/2)-1
-    for(let i = Math.floor(len/2)-1; i >= 0; i--){
-         max_heap(i, len);
-    }
-    for(let i = len-1; i > 0; i--){
-        swap(0, i);
-        max_heap(0, i);
-    }
-    return arr;
-}
-
-heapSort([3,5,3,0,8,0,1,5,1,6,5,4,0,8]);
-//[0, 0, 0, 1, 1, 3, 3, 4, 5, 5, 5, 6, 8, 8]
-```
-
 ### 内存中的堆栈
 
 我们以 C 为例来说明，对二者进行比较分析。
