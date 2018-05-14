@@ -2,7 +2,7 @@
 
 首先，函数调用栈是 LIFO 的，所以我们可以判断出下面代码的调用栈：
 
-```text
+```javascript
 function a(){
     console.log('a');
 }
@@ -21,7 +21,7 @@ a 函数执行完成之后从堆栈弹出，控制流交给 b，依此类推。
 
 我们可以使用 `console.trace()` 打印出堆栈记录。
 
-```text
+```javascript
 function a(){
     console.log('a');
     console.trace();
@@ -51,7 +51,7 @@ c @ VM2979:11
 
 它可以嵌套，嵌套的子 try/catch 会自己捕获内部的异常，不会给外层捕获的机会，如果包裹的是一个异步的代码，熟悉事件循环机制的应该知道，当前执行栈不能捕获到`marcotasks`队列中的抛出异常。
 
-```text
+```javascript
 // 嵌套
 try{
     try{
@@ -75,7 +75,7 @@ try{
 
 解决异步代码中异常捕获的办法有很多，你可以使用 `error-first` 风格：
 
-```text
+```javascript
 function handleAsyncError(cb){
     setTimeout(() => {
         try{
@@ -97,7 +97,7 @@ function handleAsyncError(cb){
 
 该函数有两个参数，第一个参数是一个对象，用来保存堆栈记录到其 `stack` 属性。第二个参数表示调用堆栈的终点，也就是只会保存其之前的堆栈记录，这样可以过滤掉对用户没用的信息。
 
-```text
+```javascript
 const ErrorStack = {};
 function a(){
     console.log('a');
