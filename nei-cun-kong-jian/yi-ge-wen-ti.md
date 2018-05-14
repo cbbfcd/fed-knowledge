@@ -3,7 +3,12 @@
 比如这样一个问题:
 
 ```text
-const Foo = (x, y) => {    this.x = x;    this.y = y;}const foo = new Foo(1, 2); // 1const bar = Foo(1, 2); // 2
+const Foo = (x, y) => {    
+    this.x = x;    
+    this.y = y;
+}
+const foo = new Foo(1, 2); // 1
+const bar = Foo(1, 2); // 2
 ```
 
 这里面的 new 的作用是什么? 第 2 个表达式与之区别?
