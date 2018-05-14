@@ -58,7 +58,26 @@ function Bar(b){
 _闭包_
 
 ```javascript
-var theThing = null;var replaceThing = function () {  var originalThing = theThing;  // 这是一个闭包，里面引用了 originalThing  // originalThing 会被挂载到当前作用域下所有闭包的作用域中  // 这里去除对 originalThing 的引用也可以避免内存泄漏  var unused = function () {    if(originalThing) {}  };  theThing = {    longStr: Date.now() +  Array(1000000).join('*'),    // 这个闭包中也挂载了 originalThing    // 所以造成了循环的引用    someMethod: function () {}  };  // originalThing = null 加这一句就不会泄露了};setInterval(replaceThing, 100);
+var theThing = null;
+
+var replaceThing = function () {
+  var originalThing = theThing;
+  // 这是一个闭包，里面引用了 originalThing
+  // originalThing 会被挂载到当前作用域下所有闭包的作用域中
+  // 这里去除对 originalThing 的引用也可以避免内存泄漏
+  var unused = function () {
+    if(originalThing) {}
+  };
+  theThing = {
+    longStr: Date.now() +  Array(1000000).join('*'),
+    // 这个闭包中也挂载了 originalThing
+    // 所以造成了循环的引用
+    someMethod: function () {}
+  };
+  // originalThing = null 加这一句就不会泄露了
+};
+
+setInterval(replaceThing, 100);
 ```
 
 除了以上的场景还有很多，主需要抓住内存泄露的本质，具体问题具体分析，具体解决。当然，IE 是大坑。
