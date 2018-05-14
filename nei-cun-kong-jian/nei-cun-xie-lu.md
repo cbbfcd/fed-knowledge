@@ -43,7 +43,7 @@ DOM 元素 a 中引用了一个匿名函数，该函数引用了 Foo 的作用�
 
 解决办法：
 
-```text
+```javascript
 function Foo(){
     let a = document.createElement('div');
     let b = document.createElement('div');
@@ -57,8 +57,7 @@ function Bar(b){
 
 _闭包_
 
-```text
-// 经典代码
+```javascript
 var theThing = null;var replaceThing = function () {    var originalThing = theThing;    // 这是一个闭包，里面引用了 originalThing    // originalThing 会被挂载到当前作用域下所有闭包的作用域中    // 这里去除对 originalThing 的引用也可以避免内存泄漏    var unused = function () {        if(originalThing) {}    };    theThing = {        longStr: Date.now() +  Array(1000000).join('*'),        // 这个闭包中也挂载了 originalThing        // 所以造成了循环的引用        someMethod: function () {}    };    // originalThing = null 加这一句就不会泄露了};setInterval(replaceThing, 100);
 ```
 
