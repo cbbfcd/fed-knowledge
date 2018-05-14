@@ -11,4 +11,5 @@
     * [堆区、栈区比较](nei-cun-kong-jian/nei-cun-zhong-de-dui-zhan/untitled.md)
   * [GC](nei-cun-kong-jian/gc/README.md)
     * [GC算法](nei-cun-kong-jian/gc/gc-suan-fa.md)
+  * [内存泄露](nei-cun-kong-jian/nei-cun-xie-lu.md)
 
