@@ -329,12 +329,12 @@
                                 
                                 <h1 id="&#x4E00;&#x4E2A;&#x95EE;&#x9898;">&#x4E00;&#x4E2A;&#x95EE;&#x9898;</h1>
 <p>&#x6BD4;&#x5982;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x95EE;&#x9898;:</p>
-<pre><code class="lang-text">const Foo = (x, y) =&gt; {    
-    this.x = x;    
-    this.y = y;
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> Foo = (x, y) =&gt; {    
+    <span class="hljs-keyword">this</span>.x = x;    
+    <span class="hljs-keyword">this</span>.y = y;
 }
-const foo = new Foo(1, 2); // 1
-const bar = Foo(1, 2); // 2
+<span class="hljs-keyword">const</span> foo = <span class="hljs-keyword">new</span> Foo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 1</span>
+<span class="hljs-keyword">const</span> bar = Foo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 2</span>
 </code></pre>
 <p>&#x8FD9;&#x91CC;&#x9762;&#x7684; new &#x7684;&#x4F5C;&#x7528;&#x662F;&#x4EC0;&#x4E48;? &#x7B2C; 2 &#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x4E0E;&#x4E4B;&#x533A;&#x522B;?</p>
 <p>&#x200B;<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new" target="_blank">MDN</a> &#x4E0A;&#x6709;&#x7B54;&#x6848;&#xFF1A;</p>
@@ -395,7 +395,7 @@ const bar = Foo(1, 2); // 2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一个问题","level":"1.2.2","depth":2,"next":{"title":"数据结构中的堆栈","level":"1.2.3","depth":2,"path":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/README.md","ref":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/README.md","articles":[{"title":"堆排序","level":"1.2.3.1","depth":3,"path":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.md","ref":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.md","articles":[]}]},"previous":{"title":"一些误区","level":"1.2.1","depth":2,"path":"nei-cun-kong-jian/yi-xie-wu-qu.md","ref":"nei-cun-kong-jian/yi-xie-wu-qu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nei-cun-kong-jian/yi-ge-wen-ti.md","mtime":"2018-05-14T07:48:46.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T07:57:00.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"一个问题","level":"1.2.2","depth":2,"next":{"title":"数据结构中的堆栈","level":"1.2.3","depth":2,"path":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/README.md","ref":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/README.md","articles":[{"title":"堆排序","level":"1.2.3.1","depth":3,"path":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.md","ref":"nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.md","articles":[]}]},"previous":{"title":"一些误区","level":"1.2.1","depth":2,"path":"nei-cun-kong-jian/yi-xie-wu-qu.md","ref":"nei-cun-kong-jian/yi-xie-wu-qu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nei-cun-kong-jian/yi-ge-wen-ti.md","mtime":"2018-05-14T09:22:32.746Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T09:23:07.410Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

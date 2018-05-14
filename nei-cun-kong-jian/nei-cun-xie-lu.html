@@ -334,8 +334,8 @@
 <p>&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x90FD;&#x662F;&#x5806;&#x533A;&#xFF0C;&#x6808;&#x533A;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x7684;&#x3002;</p>
 <p>&#x8FD9;&#x91CC;&#x6211;&#x5217;&#x4E3E;&#x4E00;&#x4E9B;&#x7F51;&#x4E0A;&#x8BF4;&#x7684;&#x5404;&#x79CD;&#x5F62;&#x5F0F;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x5F0F;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x6848;&#x4F8B;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#xFF0C;&#x6211;&#x597D;&#x505A;&#x8865;&#x5145;&#x3002;</p>
 <p><em>&#x6EE5;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;</em></p>
-<pre><code class="lang-text">function Foo(){
-    bar = &apos;hello world!&apos;
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params"></span>)</span>{
+    bar = <span class="hljs-string">&apos;hello world!&apos;</span>
 }
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4F1A;&#x610F;&#x5916;&#x7684;&#x5728;&#x5168;&#x5C40;&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A; bar &#x5C5E;&#x6027;&#xFF0C;&#x662F;&#x4E0D;&#x4F1A;&#x88AB; GC &#x91CA;&#x653E;&#x7684;&#xFF0C;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x662F; <code>&apos;use strict&apos;</code></p>
@@ -343,30 +343,29 @@
 <p>&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528; <code>console.log</code>&#x3001;<code>console.dir</code> &#x7B49;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#xFF0C;&#x8BB0;&#x5F55;&#x9519;&#x8BEF;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5C06;&#x5927;&#x91CF;&#x6570;&#x636E;&#x4FDD;&#x7559;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x3002;</p>
 <p><em>DOM&#xFF08; IE &#xFF09;</em></p>
 <p>IE &#x5BF9; DOM &#x5143;&#x7D20;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7684;&#x6E05;&#x9664;&#x7B97;&#x6CD5;&#xFF0C;&#x6B64;&#x7C7B;&#x573A;&#x666F;&#x4E0B;&#x6CC4;&#x9732;&#x7684;&#x60C5;&#x51B5;&#x5F88;&#x591A;&#x3002;</p>
-<pre><code class="lang-text">function Foo(){
-    let a = document.createElement(&apos;div&apos;);
-    let b = document.createElement(&apos;div&apos;);
-    a.onclick = function(){
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">let</span> a = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>);
+    <span class="hljs-keyword">let</span> b = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>);
+    a.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
         alert( b.outerHTML );
     }
-    return a;
+    <span class="hljs-keyword">return</span> a;
 }
 </code></pre>
 <p>DOM &#x5143;&#x7D20; a &#x4E2D;&#x5F15;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5F15;&#x7528;&#x4E86; Foo &#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x6301;&#x6709;&#x5BF9; a&#xFF0C;b &#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#xFF0C;&#x9020;&#x6210;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x3002;</p>
 <p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-text">function Foo(){
-    let a = document.createElement(&apos;div&apos;);
-    let b = document.createElement(&apos;div&apos;);
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">let</span> a = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>);
+    <span class="hljs-keyword">let</span> b = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>);
     a.onclick = Bar(b);
-    return a;
+    <span class="hljs-keyword">return</span> a;
 }
-function Bar(b){
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Bar</span>(<span class="hljs-params">b</span>)</span>{
     alert(b.outerHTML);
 }
 </code></pre>
 <p><em>&#x95ED;&#x5305;</em></p>
-<pre><code class="lang-text">// &#x7ECF;&#x5178;&#x4EE3;&#x7801;
-var theThing = null;var replaceThing = function () {    var originalThing = theThing;    // &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x95ED;&#x5305;&#xFF0C;&#x91CC;&#x9762;&#x5F15;&#x7528;&#x4E86; originalThing    // originalThing &#x4F1A;&#x88AB;&#x6302;&#x8F7D;&#x5230;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x6240;&#x6709;&#x95ED;&#x5305;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;    // &#x8FD9;&#x91CC;&#x53BB;&#x9664;&#x5BF9; originalThing &#x7684;&#x5F15;&#x7528;&#x4E5F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;    var unused = function () {        if(originalThing) {}    };    theThing = {        longStr: Date.now() +  Array(1000000).join(&apos;*&apos;),        // &#x8FD9;&#x4E2A;&#x95ED;&#x5305;&#x4E2D;&#x4E5F;&#x6302;&#x8F7D;&#x4E86; originalThing        // &#x6240;&#x4EE5;&#x9020;&#x6210;&#x4E86;&#x5FAA;&#x73AF;&#x7684;&#x5F15;&#x7528;        someMethod: function () {}    };    // originalThing = null &#x52A0;&#x8FD9;&#x4E00;&#x53E5;&#x5C31;&#x4E0D;&#x4F1A;&#x6CC4;&#x9732;&#x4E86;};setInterval(replaceThing, 100);
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> theThing = <span class="hljs-literal">null</span>;<span class="hljs-keyword">var</span> replaceThing = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{    <span class="hljs-keyword">var</span> originalThing = theThing;    <span class="hljs-comment">// &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x95ED;&#x5305;&#xFF0C;&#x91CC;&#x9762;&#x5F15;&#x7528;&#x4E86; originalThing    // originalThing &#x4F1A;&#x88AB;&#x6302;&#x8F7D;&#x5230;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x6240;&#x6709;&#x95ED;&#x5305;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;    // &#x8FD9;&#x91CC;&#x53BB;&#x9664;&#x5BF9; originalThing &#x7684;&#x5F15;&#x7528;&#x4E5F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;    var unused = function () {        if(originalThing) {}    };    theThing = {        longStr: Date.now() +  Array(1000000).join(&apos;*&apos;),        // &#x8FD9;&#x4E2A;&#x95ED;&#x5305;&#x4E2D;&#x4E5F;&#x6302;&#x8F7D;&#x4E86; originalThing        // &#x6240;&#x4EE5;&#x9020;&#x6210;&#x4E86;&#x5FAA;&#x73AF;&#x7684;&#x5F15;&#x7528;        someMethod: function () {}    };    // originalThing = null &#x52A0;&#x8FD9;&#x4E00;&#x53E5;&#x5C31;&#x4E0D;&#x4F1A;&#x6CC4;&#x9732;&#x4E86;};setInterval(replaceThing, 100);</span>
 </code></pre>
 <p>&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x7684;&#x573A;&#x666F;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x4E3B;&#x9700;&#x8981;&#x6293;&#x4F4F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x672C;&#x8D28;&#xFF0C;&#x5177;&#x4F53;&#x95EE;&#x9898;&#x5177;&#x4F53;&#x5206;&#x6790;&#xFF0C;&#x5177;&#x4F53;&#x89E3;&#x51B3;&#x3002;&#x5F53;&#x7136;&#xFF0C;IE &#x662F;&#x5927;&#x5751;&#x3002;</p>
 <p>&#x53E6;&#x5916;&#xFF0C;ES6 &#x4E2D;&#x7684; <code>WeakSet&#x3001;WeakMap</code> &#x4E5F;&#x53EF;&#x4EE5;<a href="http://es6.ruanyifeng.com/#docs/set-map" target="_blank">&#x907F;&#x514D;&#x5185;&#x5B58;&#x6CC4;&#x9732;</a>&#xFF0C;&#x4F60;&#x9020;&#x5417;?</p>
@@ -413,7 +412,7 @@ var theThing = null;var replaceThing = function () {    var originalThing = theT
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"内存泄露","level":"1.2.6","depth":2,"next":{"title":"异常处理与堆栈追踪","level":"1.2.7","depth":2,"path":"nei-cun-kong-jian/yi-chang-chu-li-yu-dui-zhan-zhui-zong.md","ref":"nei-cun-kong-jian/yi-chang-chu-li-yu-dui-zhan-zhui-zong.md","articles":[]},"previous":{"title":"GC算法","level":"1.2.5.1","depth":3,"path":"nei-cun-kong-jian/gc/gc-suan-fa.md","ref":"nei-cun-kong-jian/gc/gc-suan-fa.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nei-cun-kong-jian/nei-cun-xie-lu.md","mtime":"2018-05-14T07:48:46.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T07:57:00.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"内存泄露","level":"1.2.6","depth":2,"next":{"title":"异常处理与堆栈追踪","level":"1.2.7","depth":2,"path":"nei-cun-kong-jian/yi-chang-chu-li-yu-dui-zhan-zhui-zong.md","ref":"nei-cun-kong-jian/yi-chang-chu-li-yu-dui-zhan-zhui-zong.md","articles":[]},"previous":{"title":"GC算法","level":"1.2.5.1","depth":3,"path":"nei-cun-kong-jian/gc/gc-suan-fa.md","ref":"nei-cun-kong-jian/gc/gc-suan-fa.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nei-cun-kong-jian/nei-cun-xie-lu.md","mtime":"2018-05-14T09:22:32.744Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T09:23:07.410Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
