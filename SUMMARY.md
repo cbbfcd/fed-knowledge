@@ -6,5 +6,7 @@
   * [一个问题](nei-cun-kong-jian/yi-ge-wen-ti.md)
   * [数据结构中的堆栈](nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/README.md)
     * [堆排序](nei-cun-kong-jian/shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.md)
-  * [内存中的堆栈](nei-cun-kong-jian/nei-cun-zhong-de-dui-zhan.md)
+  * [内存中的堆栈](nei-cun-kong-jian/nei-cun-zhong-de-dui-zhan/README.md)
+    * [内存分配策略](nei-cun-kong-jian/nei-cun-zhong-de-dui-zhan/nei-cun-fen-pei-ce-lve.md)
+    * [堆区、栈区比较](nei-cun-kong-jian/nei-cun-zhong-de-dui-zhan/untitled.md)
 
