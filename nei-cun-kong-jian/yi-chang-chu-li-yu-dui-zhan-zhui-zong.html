@@ -1,0 +1,506 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>异常处理与堆栈追踪 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="nei-cun-xie-lu.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    内存空间
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="yi-xie-wu-qu.html">
+            
+                <a href="yi-xie-wu-qu.html">
+            
+                    
+                    一些误区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="yi-ge-wen-ti.html">
+            
+                <a href="yi-ge-wen-ti.html">
+            
+                    
+                    一个问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="shu-ju-jie-gou-zhong-de-dui-zhan/">
+            
+                <a href="shu-ju-jie-gou-zhong-de-dui-zhan/">
+            
+                    
+                    数据结构中的堆栈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.html">
+            
+                <a href="shu-ju-jie-gou-zhong-de-dui-zhan/dui-pai-xu.html">
+            
+                    
+                    堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="nei-cun-zhong-de-dui-zhan/">
+            
+                <a href="nei-cun-zhong-de-dui-zhan/">
+            
+                    
+                    内存中的堆栈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="nei-cun-zhong-de-dui-zhan/nei-cun-fen-pei-ce-lve.html">
+            
+                <a href="nei-cun-zhong-de-dui-zhan/nei-cun-fen-pei-ce-lve.html">
+            
+                    
+                    内存分配策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="nei-cun-zhong-de-dui-zhan/untitled.html">
+            
+                <a href="nei-cun-zhong-de-dui-zhan/untitled.html">
+            
+                    
+                    堆区、栈区比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="gc/">
+            
+                <a href="gc/">
+            
+                    
+                    GC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="gc/gc-suan-fa.html">
+            
+                <a href="gc/gc-suan-fa.html">
+            
+                    
+                    GC算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="nei-cun-xie-lu.html">
+            
+                <a href="nei-cun-xie-lu.html">
+            
+                    
+                    内存泄露
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="yi-chang-chu-li-yu-dui-zhan-zhui-zong.html">
+            
+                <a href="yi-chang-chu-li-yu-dui-zhan-zhui-zong.html">
+            
+                    
+                    异常处理与堆栈追踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >异常处理与堆栈追踪</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5F02;&#x5E38;&#x5904;&#x7406;&#x4E0E;&#x5806;&#x6808;&#x8FFD;&#x8E2A;">&#x5F02;&#x5E38;&#x5904;&#x7406;&#x4E0E;&#x5806;&#x6808;&#x8FFD;&#x8E2A;</h1>
+<p>&#x9996;&#x5148;&#xFF0C;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6808;&#x662F; LIFO &#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x51FA;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x8C03;&#x7528;&#x6808;&#xFF1A;</p>
+<pre><code class="lang-text">function a(){
+    console.log(&apos;a&apos;);
+}
+function b(){
+    console.log(&apos;b&apos;);
+    a();
+}
+function c(){
+    console.log(&apos;c&apos;);
+    b();
+}
+c(); // &#x8C03;&#x7528;&#x6808;&#xFF08;&#x4ECE;&#x6808;&#x9876;&#x5F00;&#x59CB;&#x4F9D;&#x6B21;&#x662F;&#xFF09; a -&gt; b -&gt; c
+</code></pre>
+<p>a &#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4ECE;&#x5806;&#x6808;&#x5F39;&#x51FA;&#xFF0C;&#x63A7;&#x5236;&#x6D41;&#x4EA4;&#x7ED9; b&#xFF0C;&#x4F9D;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>console.trace()</code> &#x6253;&#x5370;&#x51FA;&#x5806;&#x6808;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code class="lang-text">function a(){
+    console.log(&apos;a&apos;);
+    console.trace();
+}
+function b(){
+    console.log(&apos;b&apos;);
+    a();
+    // console.trace(); &#x53EF;&#x4EE5;&#x518D;&#x653E;&#x8FD9;&#x91CC;&#x8BD5;&#x8BD5;
+}
+function c(){
+    console.log(&apos;c&apos;);
+    b();
+}
+c();
+// &#x6253;&#x5370;&#x51FA;
+console.trace
+a @ VM2979:3
+b @ VM2979:7
+c @ VM2979:11
+(anonymous) @ VM2979:13
+</code></pre>
+<p>&#x4E86;&#x89E3;&#x4E86;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6808;&#x4EE5;&#x53CA;&#x5806;&#x6808;&#x8FFD;&#x8E2A;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x770B;&#x770B;<a href="https://www.jianshu.com/p/945502a43eaa" target="_blank">&#x5F02;&#x5E38;&#x5904;&#x7406;</a>&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x5F97;&#x719F;&#x6089;&#x81EA; ES3 &#x65F6;&#x4EE3;&#x5C31;&#x6709;&#x7684; <code>try/catch/finally</code>&#xFF0C;&#x7528;&#x6CD5;&#x548C; Java &#x4E2D;&#x7684;&#x5982;&#x51FA;&#x4E00;&#x8F99;&#xFF0C;&#x5C31;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002; </p>
+<p>&#x5B83;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#xFF0C;&#x5D4C;&#x5957;&#x7684;&#x5B50; try/catch &#x4F1A;&#x81EA;&#x5DF1;&#x6355;&#x83B7;&#x5185;&#x90E8;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x4E0D;&#x4F1A;&#x7ED9;&#x5916;&#x5C42;&#x6355;&#x83B7;&#x7684;&#x673A;&#x4F1A;&#xFF0C;&#x5982;&#x679C;&#x5305;&#x88F9;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x719F;&#x6089;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x673A;&#x5236;&#x7684;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#xFF0C;&#x5F53;&#x524D;&#x6267;&#x884C;&#x6808;&#x4E0D;&#x80FD;&#x6355;&#x83B7;&#x5230;<code>marcotasks</code>&#x961F;&#x5217;&#x4E2D;&#x7684;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</p>
+<pre><code class="lang-text">// &#x5D4C;&#x5957;
+try{
+    try{
+        throw new Error(&apos;some error&apos;);
+    }catch(e){
+        console.log(&apos;will print!&apos;);
+    }
+}catch(e){
+    console.log(&apos;never print!&apos;)
+}
+
+// &#x5F02;&#x6B65;
+try{
+    setTimeout(()=&gt;{
+         throw new Error(&apos;some error&apos;);
+    }, 0)
+}catch(e){
+    console.log(&apos;never print!&apos;);
+}
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x4E2D;&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x7684;&#x529E;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>error-first</code> &#x98CE;&#x683C;&#xFF1A;</p>
+<pre><code class="lang-text">function handleAsyncError(cb){
+    setTimeout(() =&gt; {
+        try{
+            if(someError){
+                 throw new Error(&apos;some error!&apos;);
+            }else{
+                cb(null, result);
+            }
+        }catch(e){
+            cb(e)
+        }
+    }, 0)
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684; <code>Error</code>&#x5BF9;&#x8C61;&#x5305;&#x542B; <code>message</code>&#x3001;<code>stack</code>&#x3001;<code>name</code>&#x7B49;&#x5C5E;&#x6027;&#xFF0C;&#x5176;&#x4E2D; <code>stack</code>&#x5C5E;&#x6027;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x9519;&#x8BEF;&#x7684;&#x5806;&#x6808;&#x8F68;&#x8FF9;&#x3002;&#x800C;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x5B9E;&#x4F8B;&#x7684;&#x5806;&#x6808;&#x8F68;&#x8FF9;&#x5305;&#x542B;&#x4E86;&#x81EA;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x5806;&#x6808;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x64CD;&#x4F5C;&#x5806;&#x6808;&#x8FFD;&#x8E2A;&#x5462;&#xFF1F; Node &#x73AF;&#x5883;&#x63D0;&#x4F9B;&#x4E86; <a href="https://nodejs.org/api/errors.html#errors_error_capturestacktrace_targetobject_constructoropt" target="_blank"><code>Error.captureStackTrace</code></a>&#x3002;</p>
+<p>&#x8BE5;&#x51FD;&#x6570;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x5806;&#x6808;&#x8BB0;&#x5F55;&#x5230;&#x5176; <code>stack</code> &#x5C5E;&#x6027;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x8C03;&#x7528;&#x5806;&#x6808;&#x7684;&#x7EC8;&#x70B9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x4F1A;&#x4FDD;&#x5B58;&#x5176;&#x4E4B;&#x524D;&#x7684;&#x5806;&#x6808;&#x8BB0;&#x5F55;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x8FC7;&#x6EE4;&#x6389;&#x5BF9;&#x7528;&#x6237;&#x6CA1;&#x7528;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-text">const ErrorStack = {};
+function a(){
+    console.log(&apos;a&apos;);
+    Error.captureStackTrace(ErrorStack);
+    //  Error.captureStackTrace(ErrorStack, b); &#x8FD9;&#x6837;&#x518D;&#x8BD5;&#x8BD5;
+}
+function b(){
+    console.log(&apos;b&apos;);
+    a();
+}
+function c(){
+    console.log(&apos;c&apos;);
+    b();
+}
+c();
+ErrorStack.stack;
+// &#x6253;&#x5370;&#x51FA;
+&quot;Error
+    at a (&lt;anonymous&gt;:4:11)
+    at b (&lt;anonymous&gt;:8:5)
+    at c (&lt;anonymous&gt;:12:5)
+    at &lt;anonymous&gt;:14:1&quot;
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x8FD9;&#x73A9;&#x610F;&#x513F;&#x6709;&#x4EC0;&#x4E48;&#x9E1F;&#x7528;&#xFF0C;&#x8FD9;&#x4E48;&#x8BF4;&#x5427;&#xFF0C;&#x6BD4;&#x5982;&#x725B;&#x903C;&#x54C4;&#x54C4;&#x7684;&#x6D4B;&#x8BD5;&#x6846;&#x67B6; Chai &#x5C31;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x4E0A;&#x9762;&#x7684;<a href="https://github.com/chaijs/chai/pull/922" target="_blank">&#x5806;&#x6808;&#x64CD;&#x4F5C;&#x6280;&#x672F;&#x4F7F;&#x5806;&#x6808;&#x8DDF;&#x8E2A;&#x66F4;&#x52A0;&#x4E0E;&#x4ED6;&#x4EEC;&#x7684;&#x7528;&#x6237;&#x76F8;&#x5173;</a>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="nei-cun-xie-lu.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 内存泄露">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"异常处理与堆栈追踪","level":"1.2.7","depth":2,"previous":{"title":"内存泄露","level":"1.2.6","depth":2,"path":"nei-cun-kong-jian/nei-cun-xie-lu.md","ref":"nei-cun-kong-jian/nei-cun-xie-lu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nei-cun-kong-jian/yi-chang-chu-li-yu-dui-zhan-zhui-zong.md","mtime":"2018-05-14T07:48:46.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T07:57:00.668Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
