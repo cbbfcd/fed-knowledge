@@ -2,7 +2,7 @@
 
 JavaScript 实现堆排序：
 
-```text
+```javascript
 const heapSort = target => {
     const arr = target.slice(0);
     // 交换的方法
