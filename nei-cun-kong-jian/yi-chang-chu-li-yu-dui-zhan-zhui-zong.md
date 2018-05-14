@@ -37,11 +37,11 @@ function c(){
 }
 c();
 // 打印出
-console.trace
-a @ VM2979:3
-b @ VM2979:7
-c @ VM2979:11
-(anonymous) @ VM2979:13
+//console.trace
+//a @ VM2979:3
+//b @ VM2979:7
+//c @ VM2979:11
+//(anonymous) @ VM2979:13
 
 ```
 
@@ -115,11 +115,11 @@ function c(){
 c();
 ErrorStack.stack;
 // 打印出
-"Error
-    at a (<anonymous>:4:11)
-    at b (<anonymous>:8:5)
-    at c (<anonymous>:12:5)
-    at <anonymous>:14:1"
+//"Error
+//   at a (<anonymous>:4:11)
+//    at b (<anonymous>:8:5)
+//    at c (<anonymous>:12:5)
+//    at <anonymous>:14:1"
 ```
 
 你可能会问这玩意儿有什么鸟用，这么说吧，比如牛逼哄哄的测试框架 Chai 就是使用了上面的[堆栈操作技术使堆栈跟踪更加与他们的用户相关](https://github.com/chaijs/chai/pull/922)。
