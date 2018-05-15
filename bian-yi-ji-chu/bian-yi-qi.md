@@ -1,4 +1,4 @@
-# 编译器
+# 前言
 
 JavaScript 是一门[解释型的语言](https://zh.wikipedia.org/wiki/%E7%9B%B4%E8%AD%AF%E8%AA%9E%E8%A8%80)，因此编译器的相关基础知识，我们将以 C 语言、[GCC ](https://zh.wikipedia.org/wiki/GCC)为例。
 
