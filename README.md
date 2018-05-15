@@ -14,5 +14,7 @@ description: 总结、整理前端工程师需要掌握的部分知识点
 
 联系方式:  1. QQ 2890636389  2. Github cbbfcd 3. 掘金 波比小金刚
 
+[项目地址戳这里](https://github.com/cbbfcd/fed-knowledge)
+
 
 
