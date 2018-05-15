@@ -107,6 +107,12 @@ JavaScript 比较坑爹的是它是一门寄生语言，宿主环境提供了其
 
 我一直就想接着抛出我们下一个知识点 -- WebAssembly。不过在这之前希望大家先了解一下 Mozilla 出的 [Asm.js](https://github.com/dherman/asm.js/)，以前我司前 CTO 的[文章](https://magicly.me/fe-hpc/asmjs-and-webassembly/)。
 
+这一折腾的技术趋势，感觉让前端开发更加困难（因为你要学习 C/CPP），那么有什么显而易见的好处呢？
+
+我第一个想到的就是游戏，CPP 的游戏引擎运行 JavaScript，并用 WebGL 渲染，卧槽！
+
+你可以点击[这里](https://www.unrealengine.com/zh-CN/what-is-unreal-engine-4)体验。
+
 
 
 
