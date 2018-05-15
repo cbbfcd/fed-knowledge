@@ -14,5 +14,5 @@
   * [内存泄露](nei-cun-kong-jian/nei-cun-xie-lu.md)
   * [异常处理与堆栈追踪](nei-cun-kong-jian/yi-chang-chu-li-yu-dui-zhan-zhui-zong.md)
 * [编译基础](bian-yi-ji-chu/README.md)
-  * [前言](bian-yi-ji-chu/bian-yi-qi.md)
+  * 编译过程基础
 
