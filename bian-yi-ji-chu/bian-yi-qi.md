@@ -6,7 +6,7 @@ description: 编译过程的基础知识学习
 
 我们看看 C 的编译过程，我整理了一个流程图如下：
 
-![c &#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x56FE;](../.gitbook/assets/by.png)
+![c &#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x56FE;](../imgs/by.png)
 
 ### [**预处理**](https://zh.wikipedia.org/wiki/预处理器)：
 
