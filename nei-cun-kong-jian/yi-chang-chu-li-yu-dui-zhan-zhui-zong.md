@@ -91,7 +91,7 @@ function handleAsyncError(cb){
 }
 ```
 
-这里的 `Error `对象包含 `message`、`stack`、`name `等属性，其中 `stack `属性中包含了错误的堆栈轨迹。而一个错误实例的堆栈轨迹包含了自构造函数之后的所有堆栈结构。
+这里的 `Error` 对象包含 `message`、`stack`、`name` 等属性，其中 `stack` 属性中包含了错误的堆栈轨迹。而一个错误实例的堆栈轨迹包含了自构造函数之后的所有堆栈结构。
 
 如何操作堆栈追踪呢？ Node 环境提供了 [`Error.captureStackTrace`](https://nodejs.org/api/errors.html#errors_error_capturestacktrace_targetobject_constructoropt)。
 
