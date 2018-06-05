@@ -16,7 +16,7 @@
 * [编译基础](bian-yi-ji-chu/README.md)
   * [编译过程基础](bian-yi-ji-chu/bian-yi-guo-cheng-ji-chu.md)
   * [Asm.js](bian-yi-ji-chu/asm.js.md)
-  * WebAssembly
+  * [WebAssembly](bian-yi-ji-chu/webassembly/README.md)
     * [WebAssembly 入门](bian-yi-ji-chu/webassembly/webassembly-ru-men.md)
   * JavaScript 解释器
 
