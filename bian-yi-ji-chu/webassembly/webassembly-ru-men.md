@@ -26,5 +26,7 @@ WebAssembly  是一种新的编码方式，字节码技术。将 C/CPP 通过编
 
 [API ](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
 
+总的来说，这是一项创新且优秀的技术。W3C 专门成立了小组来推动这个技术的发展，可以展望未来，可以直接像引入一个 lodash 模块一下引入一个 WebAssembly 的模块，对于前端开发来说太幸福了。
 
+弊端就是前端开发需要多掌握一门 C/CPP 了。
 
